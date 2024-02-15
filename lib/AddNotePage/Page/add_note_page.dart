@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:noteit/AddNotePage/Widget/add_note_information.dart';
+import 'package:noteit/AddNotePage/Widget/back_button_widget.dart';
 
 class AddNotePage extends StatefulWidget {
   const AddNotePage({Key? key});
@@ -12,8 +14,15 @@ class _AddNotePageState extends State<AddNotePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
-      body: Column(
-        children: [],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Stack(
+          children: [
+            BackButtonWidget(),
+            SizedBox(height: 40),
+            AddNoteInformationWidget(),
+          ],
+        ),
       ),
     );
   }
