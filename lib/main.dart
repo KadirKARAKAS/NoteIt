@@ -5,12 +5,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:noteit/HomePageNotes/Page/home_page.dart';
-import 'package:noteit/constant.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  // listenerFunction();
   runApp(const MaterialApp(
     home: HomePage(),
   ));
@@ -20,7 +18,6 @@ Future<void> main() async {
 }
 
 Future<void> handleAppStart() async {
-  // FirebaseAuth instance oluşturulur
   FirebaseAuth auth = FirebaseAuth.instance;
 
   // Eğer kullanıcı oturum açmamışsa

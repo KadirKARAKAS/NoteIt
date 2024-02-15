@@ -1,8 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:noteit/AddNotePage/Page/add_note_page.dart';
 import 'package:noteit/HomePageNotes/Widget/search_note_widget.dart';
 import 'package:noteit/HomePageNotes/Widget/topbar_widget.dart';
-import 'package:noteit/constant.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,20 +12,63 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  FirebaseAuth auth = FirebaseAuth.instance;
-
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color.fromRGBO(33, 33, 33, 100),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            TopBarWidget(),
-            SizedBox(height: 20),
-            SearchNoteWidget(),
-          ],
+    return Scaffold(
+      backgroundColor: Colors.grey.shade900,
+      body: Stack(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Column(
+              children: [
+                TopBarWidget(),
+                SizedBox(height: 20),
+                SearchNoteWidget(),
+                Container(
+                  width: 300,
+                  height: 200,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 300,
+                  height: 200,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 300,
+                  height: 200,
+                  color: Colors.red,
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 20,
+            right: 10,
+            child: bbuton(),
+          ),
+        ],
+      ),
+    );
+  }
+
+  GestureDetector bbuton() {
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context, rootNavigator: true).push(
+          CupertinoPageRoute<bool>(
+            fullscreenDialog: true,
+            builder: (BuildContext context) => AddNotePage(),
+          ),
+        );
+      },
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(999),
+          color: const Color.fromRGBO(113, 113, 113, 100),
         ),
       ),
     );
