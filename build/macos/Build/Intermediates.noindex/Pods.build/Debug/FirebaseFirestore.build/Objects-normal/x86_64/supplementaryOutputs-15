@@ -1,0 +1,15 @@
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CodableErrors.swift":
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodableErrors.dia"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodableErrors.swiftdeps"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodableErrors.o"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodableErrors.d"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/AsyncAwait/CollectionReference+AsyncAwait.swift":
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CollectionReference+AsyncAwait.dia"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CollectionReference+AsyncAwait.o"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CollectionReference+AsyncAwait.d"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CollectionReference+AsyncAwait.swiftdeps"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/CodablePassThroughTypes.swift":
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodablePassThroughTypes.o"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodablePassThroughTypes.dia"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodablePassThroughTypes.swiftdeps"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/CodablePassThroughTypes.d"

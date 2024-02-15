@@ -1,0 +1,15 @@
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseStorage/FirebaseStorage/Sources/Internal/StorageDeleteTask.swift":
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageDeleteTask.d"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageDeleteTask.o"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageDeleteTask.swiftdeps"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageDeleteTask.dia"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseStorage/FirebaseStorage/Sources/StorageConstants.swift":
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageConstants.d"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageConstants.swiftdeps"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageConstants.o"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageConstants.dia"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseStorage/FirebaseStorage/Sources/StorageComponent.swift":
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageComponent.d"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageComponent.swiftdeps"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageComponent.dia"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseStorage.build/Objects-normal/x86_64/StorageComponent.o"

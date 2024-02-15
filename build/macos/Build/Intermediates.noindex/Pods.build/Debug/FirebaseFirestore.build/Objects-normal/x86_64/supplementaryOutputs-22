@@ -1,0 +1,15 @@
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/WriteBatch+WriteEncodable.swift":
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/WriteBatch+WriteEncodable.o"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/WriteBatch+WriteEncodable.d"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/WriteBatch+WriteEncodable.swiftdeps"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/WriteBatch+WriteEncodable.dia"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/TimestampEncodingStrategy.swift":
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/TimestampEncodingStrategy.d"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/TimestampEncodingStrategy.swiftdeps"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/TimestampEncodingStrategy.o"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/TimestampEncodingStrategy.dia"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/Transaction+WriteEncodable.swift":
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/Transaction+WriteEncodable.swiftdeps"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/Transaction+WriteEncodable.dia"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/Transaction+WriteEncodable.d"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/Transaction+WriteEncodable.o"

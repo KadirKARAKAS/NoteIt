@@ -1,0 +1,15 @@
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/DocumentReference+WriteEncodable.swift":
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+WriteEncodable.d"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+WriteEncodable.dia"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+WriteEncodable.o"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+WriteEncodable.swiftdeps"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/DocumentReference+ReadDecodable.swift":
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+ReadDecodable.o"
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+ReadDecodable.dia"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+ReadDecodable.swiftdeps"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentReference+ReadDecodable.d"
+"/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseFirestore/Firestore/Swift/Source/Codable/DocumentSnapshot+ReadDecodable.swift":
+  diagnostics: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentSnapshot+ReadDecodable.dia"
+  swift-dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentSnapshot+ReadDecodable.swiftdeps"
+  dependencies: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentSnapshot+ReadDecodable.d"
+  object: "/Users/macbook/Documents/GitHub/NoteIt/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseFirestore.build/Objects-normal/x86_64/DocumentSnapshot+ReadDecodable.o"

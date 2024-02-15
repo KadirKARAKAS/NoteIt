@@ -1,0 +1,29 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "4f5b3e89460d527f6662cab9dac87d7081c4702e073fa64be7693aeb9d06ed79"
+build_start_time: [1708016111, 754700000]
+build_end_time: [1708016111, 934312000]
+inputs:
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift"
+  : !private [1708007431, 785556809]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
+  : !private [1708007431, 789095551]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatLoggingTestUtils.swift"
+  : !private [1708007431, 790719425]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
+  : !private [1708007431, 791570263]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
+  : !private [1708007431, 792438147]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
+  : !private [1708007431, 794279004]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift"
+  : !private [1708007431, 786764726]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift"
+  : !private [1708007431, 759312496]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
+  : !private [1708007431, 795370872]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
+  : !private [1708007431, 793404219]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : !private [1708007431, 788231224]
+  ? "/Users/macbook/Documents/GitHub/NoteIt/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
+  : !private [1708007431, 789921673]
