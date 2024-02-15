@@ -5,20 +5,21 @@ class TopBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40),
+    return const Padding(
+      padding: EdgeInsets.only(top: 40),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
+          Text(
             "Notes",
-            style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 33, fontWeight: FontWeight.bold, color: Colors.white),
           ),
-          Container(
-            width: 30,
-            height: 20,
-            color: Colors.amber,
-          ),
+          Icon(
+            Icons.contact_page_outlined,
+            size: 35,
+            color: Colors.white,
+          )
         ],
       ),
     );
