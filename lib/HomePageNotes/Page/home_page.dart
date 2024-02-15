@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color.fromRGBO(33, 33, 33, 100),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
@@ -25,14 +25,6 @@ class _HomePageState extends State<HomePage> {
             TopBarWidget(),
             SizedBox(height: 20),
             SearchNoteWidget(),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                width: 50,
-                height: 50,
-                color: Colors.red,
-              ),
-            )
           ],
         ),
       ),
