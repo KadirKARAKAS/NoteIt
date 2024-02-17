@@ -1,4 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:noteit/HomePageNotes/Page/home_page.dart';
+import 'package:noteit/constant.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AddNoteInformationWidget extends StatefulWidget {
   const AddNoteInformationWidget({Key? key}) : super(key: key);
@@ -38,7 +42,7 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
           ParagrafTextField(),
           InkWell(
             onTap: () {
-              print(_textFieldControllerTitle);
+              addToDatabase();
             },
             child: Container(
               width: 200,
@@ -84,6 +88,43 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
               fontSize: 32,
               fontWeight: FontWeight.bold,
               color: Color.fromRGBO(146, 146, 146, 100))),
+    );
+  }
+
+  Future<void> addToDatabase() async {
+    String title = _textFieldControllerTitle.text;
+    String paragraf = _textFieldControllerParagraf.text;
+
+    final notesInfo = {
+      "PlantSpecies": title,
+      "PlantSize": paragraf,
+    };
+
+    await FirebaseFirestore.instance
+        .collection('Users')
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("Notes")
+        .add(notesInfo);
+
+    _textFieldControllerTitle.clear();
+    _textFieldControllerParagraf.clear();
+
+    final userRef = FirebaseFirestore.instance
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("Notes");
+
+    final querySnapshot = await userRef.get();
+    getdataList.clear();
+    querySnapshot.docs.forEach((doc) {
+      getdataList.add(doc.data());
+    });
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => HomePage(),
+      ),
     );
   }
 }

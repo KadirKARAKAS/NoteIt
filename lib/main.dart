@@ -6,6 +6,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:noteit/HomePageNotes/Page/home_page.dart';
 
+import 'constant.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -33,11 +35,14 @@ Future<void> handleAppStart() async {
         .collection('Users')
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .set(mapSaveData);
+    userID = auth.currentUser!.uid;
 
     runApp(const MaterialApp(
       home: HomePage(),
     ));
   } else {
+    userID = auth.currentUser!.uid;
+
     // Kullanıcı oturum açmışsa
     // Kullanıcının bitkilerinin saklandığı koleksiyona referans oluşturulur
     // Koleksiyondaki tüm belgeleri almak için sorgu yapılır ve sonuçlar querySnapshot içine kaydedilir
