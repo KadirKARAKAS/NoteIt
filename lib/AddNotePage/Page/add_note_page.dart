@@ -16,11 +16,15 @@ class _AddNotePageState extends State<AddNotePage> {
       backgroundColor: Colors.grey.shade900,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Stack(
+        child: Column(
           children: [
-            BackButtonWidget(),
-            SizedBox(height: 40),
-            AddNoteInformationWidget(),
+            Stack(
+              children: [
+                BackButtonWidget(),
+                SizedBox(height: 40),
+                AddNoteInformationWidget(),
+              ],
+            ),
           ],
         ),
       ),

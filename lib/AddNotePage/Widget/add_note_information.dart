@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:noteit/constant.dart';
 
 class AddNoteInformationWidget extends StatefulWidget {
   const AddNoteInformationWidget({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class AddNoteInformationWidget extends StatefulWidget {
 class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
   late TextEditingController _textFieldControllerTitle;
   late TextEditingController _textFieldControllerParagraf;
-  int sayi = 100; // sayi değişkenini burada tanımlıyoruz
+  int sayi = 0;
 
   @override
   void initState() {
@@ -37,6 +36,16 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
         children: [
           TitleTextField(),
           ParagrafTextField(),
+          InkWell(
+            onTap: () {
+              print(_textFieldControllerTitle);
+            },
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
     );
@@ -45,11 +54,12 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
   TextField ParagrafTextField() {
     return TextField(
       maxLength: 255,
-      maxLines: 7, // TextField'ın istediğiniz kadar satıra genişlemesini sağlar
+      maxLines: 7,
       style: const TextStyle(
           fontSize: 16, color: Color.fromRGBO(146, 146, 146, 100)),
       controller: _textFieldControllerParagraf,
       decoration: const InputDecoration(
+        counterStyle: TextStyle(color: Color.fromRGBO(146, 146, 146, 100)),
         border: InputBorder.none,
         hintText: 'Type something here...',
         hintStyle: TextStyle(
