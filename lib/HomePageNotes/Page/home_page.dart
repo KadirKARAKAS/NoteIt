@@ -4,7 +4,6 @@ import 'package:noteit/AddNotePage/Page/add_note_page.dart';
 import 'package:noteit/HomePageNotes/Widget/note_list.widget.dart';
 import 'package:noteit/HomePageNotes/Widget/search_note_widget.dart';
 import 'package:noteit/HomePageNotes/Widget/topbar_widget.dart';
-import 'package:noteit/constant.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,17 +14,24 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setState(() {
+      print("SAYFA YENNİLENDİ");
+    });
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
       body: Stack(
         children: [
-          SingleChildScrollView(
+          const SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 children: [
                   SizedBox(height: 20),

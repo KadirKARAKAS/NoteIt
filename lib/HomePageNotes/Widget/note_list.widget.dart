@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:noteit/constant.dart';
 
@@ -16,20 +14,46 @@ class NoteListWidget extends StatelessWidget {
       shrinkWrap: true,
       itemCount: getdataList.length,
       itemBuilder: (context, index) {
-        return noteContainer(size);
+        coloorrrr = getdataList[index]["NoteContainerColor"];
+        return noteContainer(size, coloorrrr);
       },
     );
   }
 
-  Padding noteContainer(Size size) {
+  Padding noteContainer(Size size, String color) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(bottom: 10),
       child: Container(
         width: size.width,
         height: 155,
         decoration: BoxDecoration(
-            color: Colors.red, borderRadius: BorderRadius.circular(13)),
+            color: colorWithString(color),
+            borderRadius: BorderRadius.circular(13)),
       ),
     );
+  }
+
+  Color colorWithString(String color) {
+    switch (color) {
+      case "red":
+        return Colors.red;
+      case "blue":
+        return Colors.blue;
+      case "green":
+        return Colors.green;
+      case "yellow":
+        return Colors.yellow;
+      case "orange":
+        return Colors.orange;
+      case "purple":
+        return Colors.purple;
+      case "teal":
+        return Colors.teal;
+      case "pink":
+        return Colors.pink;
+
+      default:
+        return Colors.white;
+    }
   }
 }

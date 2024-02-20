@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:noteit/AddNotePage/Page/add_note_page.dart';
 import 'package:noteit/HomePageNotes/Page/home_page.dart';
 
 import 'constant.dart';
@@ -11,9 +12,6 @@ import 'constant.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MaterialApp(
-    home: HomePage(),
-  ));
   Future.delayed(const Duration(milliseconds: 2000), () async {
     await handleAppStart();
   });
@@ -21,8 +19,6 @@ Future<void> main() async {
 
 Future<void> handleAppStart() async {
   FirebaseAuth auth = FirebaseAuth.instance;
-
-  // Eğer kullanıcı oturum açmamışsa
   if (auth.currentUser == null) {
     await FirebaseAuth.instance.signInAnonymously();
     Map<String, dynamic> mapSaveData = {};
@@ -42,24 +38,22 @@ Future<void> handleAppStart() async {
     ));
   } else {
     userID = auth.currentUser!.uid;
+    final userRef = FirebaseFirestore.instance
+        .collection("Users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .collection("Notes");
 
-    // Kullanıcı oturum açmışsa
-    // Kullanıcının bitkilerinin saklandığı koleksiyona referans oluşturulur
-    // Koleksiyondaki tüm belgeleri almak için sorgu yapılır ve sonuçlar querySnapshot içine kaydedilir
-
-    // Kullanıcının verileri çağırılır
+    final querySnapshot = await userRef.get();
+    getdataList.clear();
+    querySnapshot.docs.forEach((doc) {
+      getdataList.add(doc.data());
+    });
+    if (getdataList.isEmpty) {
+      print("LİSTE BOŞ");
+    } else {
+      runApp(const MaterialApp(
+        home: HomePage(),
+      ));
+    }
   }
 }
-
-
-/*final userRef = FirebaseFirestore.instance
-            .collection("Users")
-            .doc(FirebaseAuth.instance.currentUser!.uid)
-            .collection("Notes");
-
-        final querySnapshot = await userRef.get();
-        getdataList.clear();
-        querySnapshot.docs.forEach((doc) {
-          getdataList.add(doc.data());
-        });
-      },*/
