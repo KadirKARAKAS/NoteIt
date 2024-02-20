@@ -15,20 +15,30 @@ class NoteListWidget extends StatelessWidget {
       itemCount: getdataList.length,
       itemBuilder: (context, index) {
         coloorrrr = getdataList[index]["NoteContainerColor"];
-        return noteContainer(size, coloorrrr);
+        return noteContainer(
+            size, coloorrrr, index, getdataList[index]["NoteTitle"]);
       },
     );
   }
 
-  Padding noteContainer(Size size, String color) {
+  Padding noteContainer(Size size, String color, int index, String title) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Container(
-        width: size.width,
-        height: 155,
-        decoration: BoxDecoration(
-            color: colorWithString(color),
-            borderRadius: BorderRadius.circular(13)),
+      child: InkWell(
+        onTap: () {
+          print(getdataList[index]["NoteTitle"]);
+        },
+        child: Container(
+          width: size.width,
+          height: 155,
+          decoration: BoxDecoration(
+              color: colorWithString(color),
+              borderRadius: BorderRadius.circular(13)),
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 55, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }
