@@ -40,18 +40,87 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
         children: [
           TitleTextField(),
           ParagrafTextField(),
-          InkWell(
-            onTap: () {
-              addToDatabase();
-            },
-            child: Container(
-              width: 200,
-              height: 200,
-              color: Colors.white,
-            ),
-          ),
+          _buildGridView(),
+          saveDataButton(),
         ],
       ),
+    );
+  }
+
+  GestureDetector saveDataButton() {
+    return GestureDetector(
+      onTap: () async {
+        addToDatabase();
+        final userRef = FirebaseFirestore.instance
+            .collection("Users")
+            .doc(FirebaseAuth.instance.currentUser!.uid)
+            .collection("Notes");
+
+        final querySnapshot = await userRef.get();
+        getdataList.clear();
+        querySnapshot.docs.forEach((doc) {
+          getdataList.add(doc.data());
+        });
+      },
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(999),
+          color: const Color.fromRGBO(113, 113, 113, 100),
+        ),
+      ),
+    );
+  }
+
+  final Map<Color, String> colorNames = {
+    Colors.red: 'red',
+    Colors.blue: 'blue',
+    Colors.green: 'green',
+    Colors.yellow: 'yellow',
+    Colors.orange: 'orange',
+    Colors.purple: 'purple',
+    Colors.teal: 'teal',
+    Colors.pink: 'pink',
+  };
+
+  Widget _buildGridView() {
+    final List<Color> containerColors = [
+      Colors.red,
+      Colors.blue,
+      Colors.green,
+      Colors.yellow,
+      Colors.orange,
+      Colors.purple,
+      Colors.teal,
+      Colors.pink,
+    ];
+
+    return GridView.builder(
+      shrinkWrap: true,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 4,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
+        childAspectRatio: 120 / 55,
+      ),
+      itemCount: 8,
+      itemBuilder: (context, index) {
+        return InkWell(
+          onTap: () {
+            final Color color = containerColors[index % containerColors.length];
+            containerColorName = colorNames[color] ?? 'unknown';
+            print("Container color name: $containerColorName");
+          },
+          child: Container(
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: containerColors[index % containerColors.length],
+              borderRadius: BorderRadius.circular(5),
+            ),
+          ),
+        );
+      },
     );
   }
 
@@ -60,16 +129,19 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
       maxLength: 255,
       maxLines: 7,
       style: const TextStyle(
-          fontSize: 16, color: Color.fromRGBO(146, 146, 146, 100)),
+        fontSize: 16,
+        color: Color.fromRGBO(146, 146, 146, 100),
+      ),
       controller: _textFieldControllerParagraf,
       decoration: const InputDecoration(
         counterStyle: TextStyle(color: Color.fromRGBO(146, 146, 146, 100)),
         border: InputBorder.none,
         hintText: 'Type something here...',
         hintStyle: TextStyle(
-            fontSize: 19,
-            fontWeight: FontWeight.w500,
-            color: Color.fromRGBO(146, 146, 146, 100)),
+          fontSize: 19,
+          fontWeight: FontWeight.w500,
+          color: Color.fromRGBO(146, 146, 146, 100),
+        ),
       ),
     );
   }
@@ -77,27 +149,32 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
   TextField TitleTextField() {
     return TextField(
       style: const TextStyle(
-          fontSize: 32,
-          fontWeight: FontWeight.bold,
-          color: Color.fromRGBO(146, 146, 146, 100)),
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+        color: Color.fromRGBO(146, 146, 146, 100),
+      ),
       controller: _textFieldControllerTitle,
       decoration: const InputDecoration(
-          border: InputBorder.none,
-          hintText: 'Title',
-          hintStyle: TextStyle(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: Color.fromRGBO(146, 146, 146, 100))),
+        border: InputBorder.none,
+        hintText: 'Title',
+        hintStyle: TextStyle(
+          fontSize: 32,
+          fontWeight: FontWeight.bold,
+          color: Color.fromRGBO(146, 146, 146, 100),
+        ),
+      ),
     );
   }
 
   Future<void> addToDatabase() async {
     String title = _textFieldControllerTitle.text;
     String paragraf = _textFieldControllerParagraf.text;
+    String containerColor = containerColorName;
 
     final notesInfo = {
-      "PlantSpecies": title,
-      "PlantSize": paragraf,
+      "NoteTitle": title,
+      "NoteParagraf": paragraf,
+      "NoteContainerColor": containerColor,
     };
 
     await FirebaseFirestore.instance
