@@ -11,7 +11,8 @@ class NoteListWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return ListView.builder(
-      padding: EdgeInsets.all(0),
+      physics: const NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.only(top: 0),
       shrinkWrap: true,
       itemCount: getdataList.length,
       itemBuilder: (context, index) {

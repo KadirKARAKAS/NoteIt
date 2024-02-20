@@ -22,16 +22,19 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey.shade900,
       body: Stack(
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              children: [
-                TopBarWidget(),
-                SizedBox(height: 20),
-                SearchNoteWidget(),
-                SizedBox(height: 10),
-                Container(height: size.height, child: NoteListWidget()),
-              ],
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  TopBarWidget(),
+                  SizedBox(height: 20),
+                  SearchNoteWidget(),
+                  SizedBox(height: 20),
+                  NoteListWidget()
+                ],
+              ),
             ),
           ),
           Positioned(
