@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:noteit/AddNotePage/Page/add_note_page.dart';
+import 'package:noteit/HomePageNotes/Widget/note_list.widget.dart';
 import 'package:noteit/HomePageNotes/Widget/search_note_widget.dart';
 import 'package:noteit/HomePageNotes/Widget/topbar_widget.dart';
+import 'package:noteit/constant.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,6 +16,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: Colors.grey.shade900,
       body: Stack(
@@ -25,21 +29,8 @@ class _HomePageState extends State<HomePage> {
                 TopBarWidget(),
                 SizedBox(height: 20),
                 SearchNoteWidget(),
-                Container(
-                  width: 300,
-                  height: 200,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 300,
-                  height: 200,
-                  color: Colors.red,
-                ),
-                Container(
-                  width: 300,
-                  height: 200,
-                  color: Colors.red,
-                ),
+                SizedBox(height: 10),
+                Container(height: size.height, child: NoteListWidget()),
               ],
             ),
           ),

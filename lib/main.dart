@@ -50,3 +50,16 @@ Future<void> handleAppStart() async {
     // Kullanıcının verileri çağırılır
   }
 }
+
+
+/*final userRef = FirebaseFirestore.instance
+            .collection("Users")
+            .doc(FirebaseAuth.instance.currentUser!.uid)
+            .collection("Notes");
+
+        final querySnapshot = await userRef.get();
+        getdataList.clear();
+        querySnapshot.docs.forEach((doc) {
+          getdataList.add(doc.data());
+        });
+      },*/
