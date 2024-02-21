@@ -36,8 +36,8 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   SizedBox(height: 20),
                   TopBarWidget(),
-                  SizedBox(height: 20),
-                  SearchNoteWidget(),
+                  //SizedBox(height: 20),
+                  // SearchNoteWidget(),
                   SizedBox(height: 20),
                   NoteListWidget(),
                 ],

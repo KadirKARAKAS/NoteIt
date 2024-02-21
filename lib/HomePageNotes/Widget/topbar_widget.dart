@@ -15,11 +15,11 @@ class TopBarWidget extends StatelessWidget {
             style: TextStyle(
                 fontSize: 33, fontWeight: FontWeight.bold, color: Colors.white),
           ),
-          Icon(
+          /*  Icon(
             Icons.contact_page_outlined,
             size: 35,
             color: Colors.white,
-          )
+          )*/
         ],
       ),
     );

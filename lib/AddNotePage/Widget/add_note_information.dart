@@ -42,9 +42,10 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
         children: [
           Column(
             children: [
-              const SizedBox(height: 90),
+              const SizedBox(height: 100),
               TitleTextField(),
               ParagrafTextField(),
+              SizedBox(height: 20),
               _buildGridView(),
             ],
           ),
@@ -112,6 +113,7 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
         childAspectRatio: 120 / 55,
       ),
       itemCount: 8,
+      padding: EdgeInsetsDirectional.all(0),
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
