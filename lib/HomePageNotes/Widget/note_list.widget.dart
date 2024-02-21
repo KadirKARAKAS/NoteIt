@@ -39,24 +39,45 @@ class NoteListWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: colorWithString(color),
               borderRadius: BorderRadius.circular(13)),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 5, left: 5, right: 100),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 5, left: 10, right: 90),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    RichText(
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        text: TextSpan(
+                          text: title,
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        )),
+                    RichText(
+                      maxLines: 6,
+                      overflow: TextOverflow.ellipsis,
+                      text: TextSpan(
+                        text: paragraph,
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 15),
+                      ),
+                    ),
+                  ],
                 ),
-                RichText(
-                  maxLines: 5,
-                  strutStyle: const StrutStyle(fontSize: 12.0),
-                  text: TextSpan(
-                      style: const TextStyle(color: Colors.black),
-                      text: paragraph),
+              ),
+              Positioned(
+                right: 20,
+                bottom: 55,
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.white,
                 ),
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),
