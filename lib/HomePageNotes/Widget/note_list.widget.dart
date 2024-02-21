@@ -16,12 +16,17 @@ class NoteListWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         coloorrrr = getdataList[index]["NoteContainerColor"];
         return noteContainer(
-            size, coloorrrr, index, getdataList[index]["NoteTitle"]);
+            size,
+            coloorrrr,
+            index,
+            getdataList[index]["NoteTitle"],
+            getdataList[index]["NoteParagraf"]);
       },
     );
   }
 
-  Padding noteContainer(Size size, String color, int index, String title) {
+  Padding noteContainer(
+      Size size, String color, int index, String title, String paragraph) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: InkWell(
@@ -34,9 +39,24 @@ class NoteListWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: colorWithString(color),
               borderRadius: BorderRadius.circular(13)),
-          child: Text(
-            title,
-            style: TextStyle(fontSize: 55, fontWeight: FontWeight.bold),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 5, left: 5, right: 100),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ),
+                RichText(
+                  maxLines: 5,
+                  strutStyle: const StrutStyle(fontSize: 12.0),
+                  text: TextSpan(
+                      style: const TextStyle(color: Colors.black),
+                      text: paragraph),
+                ),
+              ],
+            ),
           ),
         ),
       ),

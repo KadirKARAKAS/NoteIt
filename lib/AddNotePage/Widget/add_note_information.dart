@@ -126,7 +126,6 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
 
   TextField ParagrafTextField() {
     return TextField(
-      maxLength: 255,
       maxLines: 7,
       style: const TextStyle(
         fontSize: 16,
