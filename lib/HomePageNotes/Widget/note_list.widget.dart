@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noteit/OpenNoteDetailPage/Page/detail_home_page.dart';
 import 'package:noteit/constant.dart';
 
 class NoteListWidget extends StatelessWidget {
@@ -20,18 +21,25 @@ class NoteListWidget extends StatelessWidget {
             coloorrrr,
             index,
             getdataList[index]["NoteTitle"],
-            getdataList[index]["NoteParagraf"]);
+            getdataList[index]["NoteParagraf"],
+            context);
       },
     );
   }
 
-  Padding noteContainer(
-      Size size, String color, int index, String title, String paragraph) {
+  Padding noteContainer(Size size, String color, int index, String title,
+      String paragraph, context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: InkWell(
         onTap: () {
-          print(getdataList[index]["NoteTitle"]);
+          geciciIndex = index;
+          print(geciciIndex);
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DetailHomePage(),
+              ));
         },
         child: Container(
           width: size.width,
@@ -51,7 +59,7 @@ class NoteListWidget extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         text: TextSpan(
                           text: title,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),

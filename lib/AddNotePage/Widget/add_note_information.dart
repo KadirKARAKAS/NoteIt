@@ -34,14 +34,21 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 110),
-      child: Column(
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width,
+      height: size.height,
+      child: Stack(
         children: [
-          TitleTextField(),
-          ParagrafTextField(),
-          _buildGridView(),
-          saveDataButton(),
+          Column(
+            children: [
+              const SizedBox(height: 90),
+              TitleTextField(),
+              ParagrafTextField(),
+              _buildGridView(),
+            ],
+          ),
+          Positioned(bottom: 20, right: 0, child: saveDataButton()),
         ],
       ),
     );
