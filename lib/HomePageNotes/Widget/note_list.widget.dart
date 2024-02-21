@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:noteit/OpenNoteDetailPage/Page/detail_home_page.dart';
 import 'package:noteit/constant.dart';
@@ -35,11 +36,12 @@ class NoteListWidget extends StatelessWidget {
         onTap: () {
           geciciIndex = index;
           print(geciciIndex);
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => DetailHomePage(),
-              ));
+          Navigator.of(context, rootNavigator: true).push(
+            CupertinoPageRoute<bool>(
+              fullscreenDialog: true,
+              builder: (BuildContext context) => DetailHomePage(),
+            ),
+          );
         },
         child: Container(
           width: size.width,
@@ -77,12 +79,12 @@ class NoteListWidget extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: 20,
-                bottom: 55,
+                right: 30,
+                bottom: 60,
                 child: Container(
-                  width: 50,
-                  height: 50,
-                  color: Colors.white,
+                  width: 30,
+                  height: 30,
+                  child: Image.asset("assets/trash1.png"),
                 ),
               )
             ],

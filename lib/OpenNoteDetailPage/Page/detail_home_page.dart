@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noteit/OpenNoteDetailPage/Widget/back_button.dart';
 import 'package:noteit/OpenNoteDetailPage/Widget/detail_page_note_information.dart';
-import 'package:noteit/constant.dart';
 
 class DetailHomePage extends StatefulWidget {
   const DetailHomePage({super.key});

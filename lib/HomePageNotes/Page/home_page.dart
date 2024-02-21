@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:noteit/AddNotePage/Page/add_note_page.dart';
 import 'package:noteit/HomePageNotes/Widget/note_list.widget.dart';
-import 'package:noteit/HomePageNotes/Widget/search_note_widget.dart';
 import 'package:noteit/HomePageNotes/Widget/topbar_widget.dart';
 
 class HomePage extends StatefulWidget {
