@@ -203,6 +203,7 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
     getdataList.clear();
     querySnapshot.docs.forEach((doc) {
       getdataList.add(doc.data());
+      docIDList.add(doc.id);
     });
 
     Navigator.push(

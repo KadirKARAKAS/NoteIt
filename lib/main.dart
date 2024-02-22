@@ -45,11 +45,18 @@ Future<void> handleAppStart() async {
     final querySnapshot = await userRef.get();
     getdataList.clear();
     querySnapshot.docs.forEach((doc) {
+      docIDList.add(doc.id);
       getdataList.add(doc.data());
     });
+
     if (getdataList.isEmpty) {
       print("LİSTE BOŞ");
+      runApp(const MaterialApp(
+        home: HomePage(),
+      ));
     } else {
+      print("LİSTE DOLU");
+
       runApp(const MaterialApp(
         home: HomePage(),
       ));
