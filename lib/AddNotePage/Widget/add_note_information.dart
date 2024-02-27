@@ -117,15 +117,20 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
+            setState(() {
+              selectedContainerIndex = index;
+            });
             final Color color = containerColors[index % containerColors.length];
             containerColorName = colorNames[color] ?? 'unknown';
-            print("Container color name: $containerColorName");
           },
           child: Container(
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: containerColors[index % containerColors.length],
               borderRadius: BorderRadius.circular(5),
+              border: selectedContainerIndex == index
+                  ? Border.all(color: Colors.white, width: 2)
+                  : null,
             ),
           ),
         );
@@ -206,6 +211,7 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
       docIDList.add(doc.id);
     });
 
+    // ignore: use_build_context_synchronously
     Navigator.push(
       context,
       MaterialPageRoute(
