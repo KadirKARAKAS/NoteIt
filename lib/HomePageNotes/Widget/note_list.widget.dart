@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:noteit/HomePageNotes/Page/home_page.dart';
 import 'package:noteit/OpenNoteDetailPage/Page/detail_home_page.dart';
 import 'package:noteit/constant.dart';
 
