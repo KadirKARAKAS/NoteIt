@@ -78,6 +78,10 @@ class _AddNoteInformationWidgetState extends State<AddNoteInformationWidget> {
           borderRadius: BorderRadius.circular(999),
           color: const Color.fromRGBO(113, 113, 113, 100),
         ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Image(image: AssetImage("assets/save.png")),
+        ),
       ),
     );
   }
