@@ -19,7 +19,7 @@ class _NoteListWidgetState extends State<NoteListWidget> {
 
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.only(top: 0),
+      padding: const EdgeInsets.only(top: 0),
       shrinkWrap: true,
       itemCount: getdataList.length,
       itemBuilder: (context, index) {
@@ -43,11 +43,10 @@ class _NoteListWidgetState extends State<NoteListWidget> {
       child: InkWell(
         onTap: () {
           geciciIndex = index;
-          print(geciciIndex);
           Navigator.of(context, rootNavigator: true).push(
             CupertinoPageRoute<bool>(
               fullscreenDialog: true,
-              builder: (BuildContext context) => DetailHomePage(),
+              builder: (BuildContext context) => const DetailHomePage(),
             ),
           );
         },
@@ -92,6 +91,7 @@ class _NoteListWidgetState extends State<NoteListWidget> {
                 child: InkWell(
                   onTap: () async {
                     geciciIndex = index;
+
                     await FirebaseFirestore.instance
                         .collection("Users")
                         .doc(FirebaseAuth.instance.currentUser!.uid)
@@ -101,29 +101,8 @@ class _NoteListWidgetState extends State<NoteListWidget> {
                     getdataList.removeAt(index);
                     docIDList.removeAt(index);
                     setState(() {
-                      print("aaaaa");
-/*
-                      getdataList.clear();
-                      final userRef = FirebaseFirestore.instance
-                          .collection("Users")
-                          .doc(FirebaseAuth.instance.currentUser!.uid)
-                          .collection("Notes");
-
-                      final querySnapshot = await userRef.get();
-                      getdataList.clear();
-                      querySnapshot.docs.forEach((doc) {
-                        docIDList.add(doc.id);
-                        getdataList.add(doc.data());
-                      });
-                       */
+                      print("setstate");
                     });
-                    /*
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ));
-                        */
                   },
                   child: Container(
                     width: 30,
@@ -163,10 +142,28 @@ class _NoteListWidgetState extends State<NoteListWidget> {
     }
   }
 
-  Container deleteContainer() {
-    return Container(
-      width: 200,
-      height: 200,
+  showAlertDialog(BuildContext context) {
+    AlertDialog alert = AlertDialog(
+      title: Text("Will you erase the note?"),
+      content: Text("AIf you delete the note, you cannot bring it back!"),
+      actions: [
+        TextButton(
+          child: Text("Cancel"),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        TextButton(
+          child: Text("Delete"),
+          onPressed: () {},
+        ),
+      ],
+    );
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
     );
   }
 }

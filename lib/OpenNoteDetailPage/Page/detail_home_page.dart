@@ -16,13 +16,15 @@ class _DetailHomePageState extends State<DetailHomePage> {
       backgroundColor: Colors.grey.shade900,
       body: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            BackButtonWidg(),
-            SizedBox(height: 15),
-            DetailPageNoteInformation(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              BackButtonWidg(),
+              SizedBox(height: 15),
+              DetailPageNoteInformation(),
+            ],
+          ),
         ),
       ),
     );
