@@ -14,7 +14,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       print("SAYFA YENNİLENDİ");
@@ -35,8 +34,6 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   SizedBox(height: 20),
                   TopBarWidget(),
-                  //SizedBox(height: 20),
-                  // SearchNoteWidget(),
                   SizedBox(height: 20),
                   NoteListWidget(),
                 ],
@@ -52,24 +49,33 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  GestureDetector bbuton() {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context, rootNavigator: true).push(
-          CupertinoPageRoute<bool>(
-            fullscreenDialog: true,
-            builder: (BuildContext context) => AddNotePage(),
+  InkWell bbuton() {
+    return InkWell(
+        hoverColor: Colors.transparent,
+        focusColor: Colors.transparent,
+        splashColor: Colors.transparent,
+        splashFactory: NoSplash.splashFactory,
+        onTap: () {
+          Navigator.of(context, rootNavigator: true).push(
+            CupertinoPageRoute<bool>(
+              fullscreenDialog: true,
+              builder: (BuildContext context) => AddNotePage(),
+            ),
+          );
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(999),
+            color: const Color.fromRGBO(113, 113, 113, 100),
           ),
-        );
-      },
-      child: Container(
-        width: 60,
-        height: 60,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(999),
-          color: const Color.fromRGBO(113, 113, 113, 100),
-        ),
-      ),
-    );
+          child: const Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Image(
+              image: AssetImage("assets/plus.png"),
+              width: 40,
+              height: 40,
+            ),
+          ),
+        ));
   }
 }
